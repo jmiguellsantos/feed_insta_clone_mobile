@@ -5,6 +5,6 @@ import { View } from 'react-native';
 
 const VitaeSobre = () => {
   return <View />;
-}
+};
 
 export default VitaeSobre;
