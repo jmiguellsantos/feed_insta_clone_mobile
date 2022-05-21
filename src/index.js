@@ -1,12 +1,17 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Vitae from './pages/Vitae';
+import Feed from './pages/Feed';
 import VitaeSobre from './pages/VitaeSobre';
 
-const Stack = createStackNavigator({});
+const Stack = createStackNavigator();
+
+function LogoTitle() {
+  return <Image style={{ width: 100 }} source={require('./assets/instagram.png')} />;
+}
 
 export default function App() {
   return (
@@ -14,14 +19,12 @@ export default function App() {
       <Stack.Navigator
         initialRouteName="Curriculum"
         screenOptions={{
-          headerMode: 'screen',
-          headerTintColor: 'white',
-          headerStyle: { backgroundColor: 'tomato' },
+          headerTitle: props => <LogoTitle {...props} />,
         }}
       >
         <Stack.Screen
           name="Curriculum"
-          component={Vitae}
+          component={Feed}
           options={{
             title: 'My profile',
           }}

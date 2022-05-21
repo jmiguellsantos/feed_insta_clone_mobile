@@ -1,14 +1,17 @@
 import React from 'react';
-import { Image } from 'react-native';
 import createStackNavigator from '@react-navigation/stack';
+import { StatusBar } from 'react-native';
 
 import Vitae from './pages/Vitae';
-import logo from './assets/instagram.png';
 
 const Stack = createStackNavigator();
 
 export default function Routes() {
-  <Stack.Navigator>
-    <Stack.Screen name="Home" component={Vitae} />
-  </Stack.Navigator>;
+  <>
+    <StatusBar barStyle="dark-content" backgroundColor="#f5f5f5" />
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Vitae} />
+    </Stack.Navigator>
+    ;
+  </>;
 }
