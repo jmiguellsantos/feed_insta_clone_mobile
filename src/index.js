@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Feed from './pages/Feed';
-import VitaeSobre from './pages/VitaeSobre';
 
 const Stack = createStackNavigator();
 
@@ -17,23 +16,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Curriculum"
+        initialRouteName="Feed"
         screenOptions={{
           headerTitle: props => <LogoTitle {...props} />,
         }}
       >
         <Stack.Screen
-          name="Curriculum"
+          name="Feed"
           component={Feed}
           options={{
             title: 'My profile',
-          }}
-        />
-        <Stack.Screen
-          name="Sobre"
-          component={VitaeSobre}
-          oprtions={{
-            title: 'About',
           }}
         />
       </Stack.Navigator>
