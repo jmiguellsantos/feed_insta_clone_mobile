@@ -12,3 +12,9 @@ Instagram interface clone made with React Native ❤️
 ## Preview
 
 ![Preview](https://raw.githubusercontent.com/rocketseat-content/youtube-ui-clone-instagram-feed/master/preview.gif)
+
+Rodar servidor json ->
+
+yarn json-server server.json -d 1000 -w
+
+install -> json-server --watch db.json
